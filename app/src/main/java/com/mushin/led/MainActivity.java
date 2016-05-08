@@ -162,8 +162,8 @@ public class MainActivity extends ActionBarActivity {
         PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(),requestCode,new Intent(),0);
 
         // Set the title, text, and behaviour (PendingIntent - the Activity that will be opened after the notification is clicked) of the Notification.
-        String subject = "New Notification";
-        String body = "Customise Notification Right Here!";
+        String subject = "Notification LED";
+        String body = "RED LED";
         notification.setLatestEventInfo(this,subject, body, resultPendingIntent);
         // Set Notification defaults and flags.
         notification.defaults =  Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND;
@@ -184,8 +184,8 @@ public class MainActivity extends ActionBarActivity {
 
         // Create a Notification Builder.
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
-        builder.setContentTitle("Notification") // Set Title.
-                .setContentText("Custom Notification") // Set detail Text.
+        builder.setContentTitle("Notification LED") // Set Title.
+                .setContentText("Green LED") // Set detail Text.
                 .setSmallIcon(R.mipmap.ic_launcher) // Set a notification Icon.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
                 .setLights(Color.GREEN,750,750);
@@ -219,8 +219,8 @@ public class MainActivity extends ActionBarActivity {
 
         // Create a Notification Builder.
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
-                .setContentTitle("Notification") // Set Title.
-                .setContentText("Custom Notification") // Set detail Text.
+                .setContentTitle("Notification LED") // Set Title.
+                .setContentText("Blue LED") // Set detail Text.
                 .setLargeIcon(myIconBitmap) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
@@ -244,8 +244,8 @@ public class MainActivity extends ActionBarActivity {
 
         // Create a Notification Builder.
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
-                .setContentTitle("Notification") // Set Title.
-                .setContentText("Custom Notification") // Set detail Text.
+                .setContentTitle("Notification LED") // Set Title.
+                .setContentText("Pink LED") // Set detail Text.
                 .setLargeIcon(myIconBitmap) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
@@ -269,8 +269,8 @@ public class MainActivity extends ActionBarActivity {
 
         // Create a Notification Builder.
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
-                .setContentTitle("Notification") // Set Title.
-                .setContentText("Custom Notification") // Set detail Text.
+                .setContentTitle("Notification LED") // Set Title.
+                .setContentText("Purple LED") // Set detail Text.
                 .setLargeIcon(myIconBitmap) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
@@ -294,8 +294,8 @@ public class MainActivity extends ActionBarActivity {
 
         // Create a Notification Builder.
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
-                .setContentTitle("Notification") // Set Title.
-                .setContentText("Custom Notification") // Set detail Text.
+                .setContentTitle("Notification LED") // Set Title.
+                .setContentText("Deep Sky Blue LED") // Set detail Text.
                 .setLargeIcon(myIconBitmap) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
@@ -319,8 +319,8 @@ public class MainActivity extends ActionBarActivity {
 
         // Create a Notification Builder.
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
-                .setContentTitle("Notification") // Set Title.
-                .setContentText("Custom Notification") // Set detail Text.
+                .setContentTitle("Notification LED") // Set Title.
+                .setContentText("Silver LED") // Set detail Text.
                 .setLargeIcon(myIconBitmap) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
@@ -344,8 +344,8 @@ public class MainActivity extends ActionBarActivity {
 
         // Create a Notification Builder.
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
-                .setContentTitle("Notification") // Set Title.
-                .setContentText("Custom Notification") // Set detail Text.
+                .setContentTitle("Notification LED") // Set Title.
+                .setContentText("Dark Orange LED") // Set detail Text.
                 .setLargeIcon(myIconBitmap) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
