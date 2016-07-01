@@ -12,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -120,6 +121,15 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        button9 = (Button) findViewById(R.id.button9);
+        button9.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+            @Override
+            public void onClick(View v) {
+                yellowLEDNotification();
+            }
+        });
+
 
     }
 
@@ -208,20 +218,19 @@ public class MainActivity extends ActionBarActivity {
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void blueLEDNotification() {
         // Load a Bitmap from Resources/mipmap.
-        Bitmap myIconBitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.bearded_emote);
+        Bitmap myIconBitmap = BitmapFactory.decodeResource(this.getResources(), R.mipmap.bearded_emote);
 
         // Create a Result Intent - To navigate to an Activity after notification is clicked/opened.
         //Intent resultIntent = new Intent(getApplicationContext(), null);
-
         // Set the Notification's Click Behaviour.
         int requestCode = 0;
-        PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(),requestCode,new Intent(),PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(getBaseContext(),requestCode,new Intent(),PendingIntent.FLAG_UPDATE_CURRENT);
 
         // Create a Notification Builder.
-        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(getBaseContext())
                 .setContentTitle("Notification LED") // Set Title.
                 .setContentText("Blue LED") // Set detail Text.
-                .setLargeIcon(myIconBitmap) // Set a notification Icon.
+                .setSmallIcon(R.mipmap.ic_launcher) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
                 .setLights(Color.BLUE,750,1000);
@@ -235,9 +244,6 @@ public class MainActivity extends ActionBarActivity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void pinkLEDNotification() {
-        // Load a Bitmap from Resources/mipmap.
-        Bitmap myIconBitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.bearded_emote);
-
         // Set the Notification's Click Behaviour.
         int requestCode = 0;
         PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(),requestCode,new Intent(),PendingIntent.FLAG_UPDATE_CURRENT);
@@ -246,7 +252,7 @@ public class MainActivity extends ActionBarActivity {
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
                 .setContentTitle("Notification LED") // Set Title.
                 .setContentText("Pink LED") // Set detail Text.
-                .setLargeIcon(myIconBitmap) // Set a notification Icon.
+                .setSmallIcon(R.mipmap.ic_launcher) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
                 .setLights(Color.argb(255,255,105,180), 750, 1000);
@@ -260,9 +266,6 @@ public class MainActivity extends ActionBarActivity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void purpleLEDNotification() {
-        // Load a Bitmap from Resources/mipmap.
-        Bitmap myIconBitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.bearded_emote);
-
         // Set the Notification's Click Behaviour.
         int requestCode = 0;
         PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(),requestCode,new Intent(),PendingIntent.FLAG_UPDATE_CURRENT);
@@ -271,7 +274,7 @@ public class MainActivity extends ActionBarActivity {
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
                 .setContentTitle("Notification LED") // Set Title.
                 .setContentText("Purple LED") // Set detail Text.
-                .setLargeIcon(myIconBitmap) // Set a notification Icon.
+                .setSmallIcon(R.mipmap.ic_launcher) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
                 .setLights(Color.argb(255,128,0,128), 750, 1000);
@@ -285,9 +288,6 @@ public class MainActivity extends ActionBarActivity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void deepskyblueLEDNotification() {
-        // Load a Bitmap from Resources/mipmap.
-        Bitmap myIconBitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.bearded_emote);
-
         // Set the Notification's Click Behaviour.
         int requestCode = 0;
         PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(),requestCode,new Intent(),PendingIntent.FLAG_UPDATE_CURRENT);
@@ -296,7 +296,7 @@ public class MainActivity extends ActionBarActivity {
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
                 .setContentTitle("Notification LED") // Set Title.
                 .setContentText("Deep Sky Blue LED") // Set detail Text.
-                .setLargeIcon(myIconBitmap) // Set a notification Icon.
+                .setSmallIcon(R.mipmap.ic_launcher) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
                 .setLights(Color.argb(255,0,191,255), 750, 1000);
@@ -335,9 +335,6 @@ public class MainActivity extends ActionBarActivity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void darkorangeLEDNotification() {
-        // Load a Bitmap from Resources/mipmap.
-        Bitmap myIconBitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.bearded_emote);
-
         // Set the Notification's Click Behaviour.
         int requestCode = 0;
         PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(),requestCode,new Intent(),PendingIntent.FLAG_UPDATE_CURRENT);
@@ -346,7 +343,7 @@ public class MainActivity extends ActionBarActivity {
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
                 .setContentTitle("Notification LED") // Set Title.
                 .setContentText("Dark Orange LED") // Set detail Text.
-                .setLargeIcon(myIconBitmap) // Set a notification Icon.
+                .setSmallIcon(R.mipmap.ic_launcher) // Set a notification Icon.
                 .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
                 .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
                 .setLights(Color.argb(255,255,140,0), 750, 1000);
@@ -356,6 +353,38 @@ public class MainActivity extends ActionBarActivity {
         // Issue and build the notification.
         int notificationID = 1;
         notificationManager.notify(notificationID,notification.build());
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    private void yellowLEDNotification() {
+        // Set the Notification's Click Behaviour.
+        int requestCode = 0;
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(),requestCode,new Intent(),PendingIntent.FLAG_UPDATE_CURRENT);
+
+        // Create a Notification Builder.
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext())
+                .setContentTitle("Notification LED") // Set Title.
+                .setContentText("Yellow LED") // Set detail Text.
+                .setSmallIcon(R.mipmap.ic_launcher) // Set a notification Icon.
+                .setContentIntent(resultPendingIntent) // Set the Notification's Click Behaviour.
+                .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
+                .setLights(Color.argb(255, 255, 140, 0), 750, 1000)
+                .setFullScreenIntent(resultPendingIntent, true);
+
+        // Get an instance of the NotificationManager service.
+        final NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        // Issue and build the notification.
+        int notificationID = 1;
+
+        notificationManager.notify(notificationID,notification.build());
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                notificationManager.cancel(1);
+            }
+        },2000);
     }
 
 
